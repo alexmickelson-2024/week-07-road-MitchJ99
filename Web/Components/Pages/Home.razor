@@ -1,10 +1,22 @@
-﻿@page "/"
+﻿@page "/road"
+@using Logic
 
-<PageTitle>Home</PageTitle>
+<div>
+   Set a Car
 
-@* link to sample page *@
-<a href="/sample">View Sample Page</a>
-@* br's for extra spacing *@
-<br>
-<br>
-<br>
+   <div>
+      row: <input @bind=vehicleRowInput />
+   </div>
+   <div>
+      column: <input @bind=vehicleColumnInput />
+   </div>
+   <button @onclick=@(() => SetVehicle("Car"))>Set Car</button>
+   <button @onclick=@(() => SetVehicle("Bus"))>Set Bus</button>
+   <button @onclick=@(() => SetVehicle("FireTruck"))>Set FireTruck</button>
+   <button @onclick=@(() => SetVehicle("Taxi"))>Set Taxi</button>
+</div>
+
+@code
+{
+    
+}
